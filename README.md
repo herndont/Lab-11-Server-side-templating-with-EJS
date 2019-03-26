@@ -24,12 +24,22 @@
 -->
 
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 1: the server lives. 
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45 mins
 
-Start time: _____
+Start time: 930 
 
-Finish time: _____
+Finish time: 1045
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1:15
+
+Number and name of feature: Feature 2: Talk to me?
+
+Estimate of time needed to complete: 30 mins
+
+Start time: 10:
+
+Finish time: 
+
+Actual time needed to complete: 
