@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const express = require('express');
 const superagent = require('superagent');
 
@@ -23,9 +25,9 @@ app.post('/searches', createSearch);
 //Catch-all
 app.get('*', (request, response) => response.status(404).send('Get the HELL out of here NOW!'));
 
-app.listen(PORT, () => console.log(`listening on port: ${PORT}`));
+app.listen(PORT, () => console.log(`listening on PORT: ${PORT}`));
 
-//Helper  
+//Helper
 function book(info) {
   const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
 
@@ -51,7 +53,7 @@ function createSearch(request, response) {
   console.log(url);
 
   superagent.get(url)
-    .then(apiResponse => apiResponse.body.items.map(bookResult => new book(bookResult.volumeInfo)))
+    .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
     .then(results => response.render('pages/searches/show', {searchResults: results}));
 }
 
