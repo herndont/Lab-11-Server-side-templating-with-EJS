@@ -10,8 +10,9 @@
     
     <div>
         <ul>
-            <% Books.forEach( volume(info => { %>
-                <li> <%= Book %></li>
+            <% createSearch.forEach( book => { %>
+                <li class= "book.li"> 
+                    <img src= "<%= book.image %></li>
                 <% }) %>
         </ul>
     </div>
